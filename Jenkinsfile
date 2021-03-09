@@ -14,7 +14,7 @@ pipeline{
           //  steps { sh 'npm run-script lint' }
        // }
         stage('Unit tests') {
-            steps { sh 'export CHROME_BIN="/usr/local/lib/node_modules/chromium";npm run test' }
+          steps { script{sh 'export CHROME_BIN="/usr/local/lib/node_modules/chromium";npm run test' }}
         }
       //}
     }
