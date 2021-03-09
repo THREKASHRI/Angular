@@ -8,7 +8,7 @@ pipeline{
 
  
 
-    stage('Test') {
+    //stage('Test') {
       //parallel {
         //stage('Static code analysis') {
           //  steps { sh 'npm run-script lint' }
@@ -17,7 +17,7 @@ pipeline{
           steps { script{sh 'export CHROME_BIN="/usr/local/lib/node_modules/chromium";npm run test' }}
         }
       //}
-    }
+    //}
 
  
 
