@@ -9,14 +9,14 @@ pipeline{
  
 
     stage('Test') {
-      parallel {
+      //parallel {
         stage('Static code analysis') {
             steps { sh 'npm run-script lint' }
         }
         stage('Unit tests') {
-            steps { sh 'karma start;npm run test' }
+            steps { sh 'export CHROME_BIN="/usr/local/lib/node_modules/chromium";npm run test' }
         }
-      }
+      //}
     }
 
  
