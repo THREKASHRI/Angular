@@ -10,9 +10,9 @@ pipeline{
 
     stage('Test') {
       //parallel {
-        stage('Static code analysis') {
-            steps { sh 'npm run-script lint' }
-        }
+        //stage('Static code analysis') {
+          //  steps { sh 'npm run-script lint' }
+       // }
         stage('Unit tests') {
             steps { sh 'export CHROME_BIN="/usr/local/lib/node_modules/chromium";npm run test' }
         }
