@@ -14,7 +14,7 @@ pipeline{
             steps { sh 'npm run-script lint' }
         }
         stage('Unit tests') {
-            steps { sh 'karma start;npm run-script test' }
+            steps { sh 'karma start;npm run test' }
         }
       }
     }
